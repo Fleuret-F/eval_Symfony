@@ -43,6 +43,13 @@ class RegistrationFormType extends AbstractType
                     ]),
                 ],
             ])
+<<<<<<< HEAD
+=======
+            ->add('pseudo')
+            ->add('nom')
+            ->add('prenom')
+            ->add('dateNaissance')
+>>>>>>> 99f2fae1c871899639f12e2c8deae74e789ebf81
         ;
     }
 
