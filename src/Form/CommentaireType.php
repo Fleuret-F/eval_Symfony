@@ -17,15 +17,15 @@ class CommentaireType extends AbstractType
         $builder
             ->add('message')
             ->add('date')
-            ->add('note')
-            ->add('auteur', EntityType::class, [
-                'class' => User::class,
-'choice_label' => 'id',
-            ])
-            ->add('articleComment', EntityType::class, [
-                'class' => Article::class,
-'choice_label' => 'id',
-            ])
+            // ->add('note')
+            // ->add('auteur', EntityType::class, [
+            //     'class' => User::class,
+            //     'choice_label' => 'id',
+            // ])
+            // ->add('articleComment', EntityType::class, [
+            //     'class' => Article::class,
+            //     'choice_label' => 'id',
+            // ])
         ;
     }
 

@@ -15,7 +15,7 @@ class UserType extends AbstractType
     {
         $builder
             ->add('email')
-            ->add('roles')
+            // ->add('roles')
             ->add('password')
             ->add('pseudo')
             ->add('nom')
@@ -24,7 +24,7 @@ class UserType extends AbstractType
             ->add('isVerified')
             ->add('avatar', EntityType::class, [
                 'class' => Media::class,
-'choice_label' => 'id',
+                'choice_label' => 'id',
             ])
         ;
     }

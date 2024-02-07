@@ -20,12 +20,12 @@ class ArticleType extends AbstractType
             ->add('date')
             ->add('auteur', EntityType::class, [
                 'class' => User::class,
-'choice_label' => 'id',
+                'choice_label' => 'id',
             ])
             ->add('categories', EntityType::class, [
                 'class' => Categorie::class,
-'choice_label' => 'id',
-'multiple' => true,
+                'choice_label' => 'nom',
+                'multiple' => true,
             ])
         ;
     }
