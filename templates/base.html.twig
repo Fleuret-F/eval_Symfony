@@ -21,7 +21,6 @@
         <header>
             <nav class="navbar">
                 <div>
-
                 </div>
                 <div>
                     <ul>
@@ -68,7 +67,11 @@
                 <ul id="menu_burger">
                     <!-- Bouton profil  header -->
                     <li>
-                        <a href="{{path('app_user_index') }}">Profil</a>
+                        {# {{path('app_user_show') }} need id #}
+                        <a href="">Profil</a>
+                        </li>
+                        <li>
+                            <a href="{{path('app_login') }}">se connecter</a>
                     </li>
                     <!-- Bouton coms header -->
                     <li>
@@ -76,11 +79,14 @@
                     </li>
                     <!-- Bouton articles header -->
                     <li>
-                        {# {{path('app_article_show') }} #}
+                        {# {{path('app_article_show') }} need id #}
                         <a href="">Mes articles</a>
                     </li>
                     <li>
                         <a href="{{path('app_article_new') }}">Poster un article</a>
+                    </li>
+                    <li>
+                        <a href="">se déconnecter</a>
                     </li>
                 </ul>
             </nav>
@@ -89,6 +95,7 @@
         {% endblock %}
 
         {% block body %}
+
         {% endblock %}
     </body>
 

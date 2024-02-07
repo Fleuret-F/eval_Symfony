@@ -107,4 +107,19 @@ form div label {
 .table {
   margin-bottom: 2rem;
   margin-top: 2rem;
+  border-collapse: separate;
+  width: 100%;
+  text-align: center;
+}
+
+.action_button_article {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+.action_button_article a {
+  color: #000;
+  padding: 0.5rem;
+  background-color: gray;
+  border-radius: 100px;
 }/*# sourceMappingURL=app.css.map */

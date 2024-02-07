@@ -31,7 +31,7 @@ class ArticleController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
 
-            $article->setAuteur($this->getUser());
+            $article->setAuteur($this->getUser('id'));
             $entityManager->persist($article);
             $entityManager->flush();
 

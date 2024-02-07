@@ -17,17 +17,11 @@ class ArticleType extends AbstractType
         $builder
             ->add('titre')
             ->add('contenu')
-            ->add('date')
-            ->add('auteur', EntityType::class, [
-                'class' => User::class,
-                'choice_label' => 'id',
-            ])
             ->add('categories', EntityType::class, [
                 'class' => Categorie::class,
                 'choice_label' => 'nom',
                 'multiple' => true,
-            ])
-        ;
+            ]);
     }
 
     public function configureOptions(OptionsResolver $resolver): void

@@ -7,32 +7,31 @@
 
 <table class="table">
     <thead>
-        <tr>
+        <tr class="article_tr_titre">
             <th>Titre</th>
+            <th>auteur</th>
             <th>Date</th>
+            <th>contenu</th>
             <th>actions</th>
         </tr>
     </thead>
     <tbody>
         {% for article in articles %}
-        <tr>
-            <td>{{ article.id }}</td>
+        <tr class="article_tr_contenu">
             <td>{{ article.titre }}</td>
+            <td>{{ article.auteur.pseudo}}</td>
+            <td>{{ article.date ? article.date|date('Y-m-d') : '' }}</td>
             <td>{{ article.contenu }}</td>
-            <td>{{ article.date ? article.date|date('Y-m-d H:i:ss') : '' }}</td>
-            <td>
-                <a href="{{ path('app_article_show', {'id': article.id}) }}">show</a>
-                <a href="{{ path('app_article_edit', {'id': article.id}) }}">edit</a>
+            <td class="action_button_article">
+                <a href="{{ path('app_article_show', {'id': article.id}) }}">voir</a>
+                <a href="{{ path('app_article_edit', {'id': article.id}) }}">modifier</a>
+                <a href="{{ path('app_article_new') }}">Poster un nouvel article</a>
+
             </td>
-        </tr>
-        {% else %}
-        <tr>
-            <td colspan="5">no records found</td>
         </tr>
         {% endfor %}
     </tbody>
 </table>
 
 
-<a href="{{ path('app_article_new') }}">Create new</a>
 {% endblock %}
