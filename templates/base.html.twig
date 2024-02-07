@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
+
+        <link rel="stylesheet" href="{{asset('styles/app.css') }}">
+        {% block stylesheets %}{% endblock %}
+        {% block javascripts %}
+        <script defer src="{{asset('JS/app.js') }}"></script>
+        {# {% block importmap %}{{ importmap('app') }} #}
+        {# {% endblock %} #}
+        {% endblock %}
+    </head>
+
+    <body>
+        {% block navbar %}
+        <header>
+            <nav class="navbar">
+                <div>
+
+                </div>
+                <div>
+                    <ul>
+                        <li>
+                            <a href="{{path('app_accueil') }}">Accueil</a>
+                        </li>
+                        <li>
+                            <a href="{{path('app_article_index') }}">Articles</a>
+                        </li>
+                        <li>
+                            <a href="{{path('app_categorie_index') }}">Catégories</a>
+                        </li>
+                        <li>
+                            <a href="{{path('app_article_new') }}">Poster un article</a>
+                        </li>
+                    </ul>
+
+                </div>
+                <div>
+                    {# Avatar #}
+                    <img src="" alt="">
+                    Avatar
+                </div>
+                <!-- SVG menu burger open -->
+                <?xml version="1.0" encoding="UTF-8"?>
+                <svg id="burger_open" viewBox="0 0 24 24" width="512" height="512">
+                    <g id="_01_align_center" data-name="01 align center">
+                        <path
+                            d="M10.931,2.75a3.728,3.728,0,0,0-7.195,0H0v2H3.736a3.728,3.728,0,0,0,7.195,0H24v-2ZM7.333,5.5a1.75,1.75,0,1,1,1.75-1.75A1.753,1.753,0,0,1,7.333,5.5Z" />
+                        <path
+                            d="M16.667,8.25A3.745,3.745,0,0,0,13.07,11H0v2H13.07a3.727,3.727,0,0,0,7.194,0H24V11H20.264A3.745,3.745,0,0,0,16.667,8.25Zm0,5.5A1.75,1.75,0,1,1,18.417,12,1.752,1.752,0,0,1,16.667,13.75Z" />
+                        <path
+                            d="M7.333,16.5a3.745,3.745,0,0,0-3.6,2.75H0v2H3.736a3.728,3.728,0,0,0,7.195,0H24v-2H10.931A3.745,3.745,0,0,0,7.333,16.5Zm0,5.5a1.75,1.75,0,1,1,1.75-1.75A1.753,1.753,0,0,1,7.333,22Z" />
+                    </g>
+                </svg>
+                <!-- SVG menu burger close -->
+                <svg viewBox="0 0 24 24" id="burger_close"
+                    alt="Icône de croix pour fermer le menu. Représentation graphique d'une croix indiquant la fermeture d'un élément de menu de navigation">
+                    <path
+                        d="m12 13.4l-4.9 4.9q-.275.275-.7.275t-.7-.275q-.275-.275-.275-.7t.275-.7l4.9-4.9l-4.9-4.9q-.275-.275-.275-.7t.275-.7q.275-.275.7-.275t.7.275l4.9 4.9l4.9-4.9q.275-.275.7-.275t.7.275q.275.275.275.7t-.275.7L13.4 12l4.9 4.9q.275.275.275.7t-.275.7q-.275.275-.7.275t-.7-.275L12 13.4Z" />
+                </svg>
+                </div>
+                <!-- Ul bouton nav header -->
+                <ul id="menu_burger">
+                    <!-- Bouton profil  header -->
+                    <li>
+                        <a href="{{path('app_user_index') }}">Profil</a>
+                    </li>
+                    <!-- Bouton coms header -->
+                    <li>
+                        <a href="">Mes commentaires</a>
+                    </li>
+                    <!-- Bouton articles header -->
+                    <li>
+                        {# {{path('app_article_show') }} #}
+                        <a href="">Mes articles</a>
+                    </li>
+                    <li>
+                        <a href="{{path('app_article_new') }}">Poster un article</a>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+
+        {% endblock %}
+
+        {% block body %}
+        {% endblock %}
+    </body>
+
+</html>

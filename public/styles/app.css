@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  /* Start header burger menu */
+  background-color: #fff;
+}
+body header {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  /* End header burger menu */
+}
+body header .navbar {
+  display: flex;
+  color: #fff;
+  justify-content: end;
+  gap: 3rem;
+  align-items: center;
+  padding: 0.5rem;
+}
+body header .navbar ul {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+body header .navbar ul a {
+  color: #000;
+  text-decoration: none;
+}
+body header .navbar svg {
+  width: 30px;
+  height: 30px;
+  margin-right: 1rem;
+}
+body header .navbar svg path {
+  fill: #000;
+}
+body header div {
+  color: #000;
+  text-transform: uppercase;
+}
+body header #burger-menu {
+  position: relative;
+  cursor: pointer;
+  z-index: 9;
+}
+body header #menu_burger {
+  display: block;
+  cursor: pointer;
+  padding: 1rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 9;
+  transform: translate(0, 30%);
+  opacity: 0;
+  text-align: center;
+  border: #000 0.1rem solid;
+  background-color: #fff;
+}
+body header #menu_burger.overlay {
+  opacity: 1;
+}
+body header #menu_burger ul {
+  display: block;
+}
+body header #menu_burger li {
+  list-style: none;
+  margin-top: 1rem;
+}
+body header #menu_burger a {
+  color: #000;
+  text-transform: uppercase;
+  display: block;
+  text-decoration: none;
+}
+body header #burger_close {
+  cursor: pointer;
+  display: none;
+  width: 32px;
+  height: 32px;
+}
+body header #close_nenu {
+  display: none;
+}
+body header #burger_open {
+  cursor: pointer;
+  width: 32px;
+  height: 32px;
+}
+
+form div {
+  margin-top: 1rem;
+}
+form div label {
+  margin-right: 1rem;
+}
+
+.btn {
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+
+.table {
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}/*# sourceMappingURL=app.css.map */
