@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html>
 
@@ -34,16 +36,22 @@
                             <a href="{{path('app_categorie_index') }}">Catégories</a>
                         </li>
                         <li>
+                            {% if is_granted('ROLE_USER')%}
                             <a href="{{path('app_article_new') }}">Poster un article</a>
+                            {% endif %}
                         </li>
                     </ul>
-
                 </div>
-                <div>
+                <div class="div_user">
+                    {% if is_granted('ROLE_USER')%}
                     {# Avatar #}
                     <img src="" alt="">
                     Avatar
+                    {% else %}
+                    <a href="{{path('app_login') }}">se connecter</a>
+                    {% endif %}
                 </div>
+                {% if is_granted('ROLE_USER')%}
                 <!-- SVG menu burger open -->
                 <?xml version="1.0" encoding="UTF-8"?>
                 <svg id="burger_open" viewBox="0 0 24 24" width="512" height="512">
@@ -69,10 +77,8 @@
                     <li>
                         {# {{path('app_user_show') }} need id #}
                         <a href="">Profil</a>
-                        </li>
-                        <li>
-                            <a href="{{path('app_login') }}">se connecter</a>
                     </li>
+
                     <!-- Bouton coms header -->
                     <li>
                         <a href="">Mes commentaires</a>
@@ -83,12 +89,17 @@
                         <a href="">Mes articles</a>
                     </li>
                     <li>
+                        {% if is_granted('ROLE_USER')%}
                         <a href="{{path('app_article_new') }}">Poster un article</a>
+                        {% endif %}
+
                     </li>
                     <li>
                         <a href="">se déconnecter</a>
                     </li>
                 </ul>
+                {% endif %}
+
             </nav>
         </header>
 
