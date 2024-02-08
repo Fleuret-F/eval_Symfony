@@ -12,7 +12,7 @@
             <th>auteur</th>
             <th>Date</th>
             <th>contenu</th>
-            <th>actions</th>
+          
         </tr>
     </thead>
     <tbody>
@@ -22,16 +22,8 @@
             <td>{{ article.auteur.pseudo}}</td>
             <td>{{ article.date ? article.date|date('Y-m-d') : '' }}</td>
             <td>{{ article.contenu }}</td>
-            <td class="action_button_article">
-                <a href="{{ path('app_article_show', {'id': article.id}) }}">voir</a>
-                <a href="{{ path('app_article_edit', {'id': article.id}) }}">modifier</a>
-                <a href="{{ path('app_article_new') }}">Poster un nouvel article</a>
-
-            </td>
         </tr>
         {% endfor %}
     </tbody>
 </table>
-
-
 {% endblock %}
