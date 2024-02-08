@@ -35,7 +35,7 @@ security:
   # Note: Only the *first* access control that matches will be used
   access_control:
     - { path: ^/admin, roles: ROLE_ADMIN }
-    - { path: ^/user, roles: ROLE_USER }
+    - { path: ^/user, roles: ROLE_ADMIN }
     - { path: ^/profile, roles: ROLE_EDITOR }
     - { path: ^/article/index, roles: ROLE_ }
     - { path: ^/article/new, roles: ROLE_USER }
@@ -46,7 +46,7 @@ security:
     - { path: ^/categorie/show, roles: ROLE_ADMIN }
     - { path: ^/categorie/edit, roles: ROLE_ADMIN }
     - { path: ^/categorie/delete, roles: ROLE_ADMIN }
-    - { path: ^/commentaire/index, roles :  }
+    - { path: ^/commentaire/index, roles: }
     - { path: ^/commentaire/new, roles: ROLE_USER }
     - { path: ^/commentaire/show, roles: ROLE_USER }
     - { path: ^/commentaire/edit, roles: ROLE_USER }
@@ -59,7 +59,6 @@ security:
     - { path: ^/user/show, roles: ROLE_USER }
     - { path: ^/user/edit, roles: ROLE_USER }
     - { path: ^/user/delete, roles: ROLE_ADMIN }
-
 when@test:
   security:
     password_hashers:
